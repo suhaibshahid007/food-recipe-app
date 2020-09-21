@@ -9,10 +9,9 @@ const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [searchRecipe, setSearchRecipe] = useState('');
   const [query, setQuery] = useState('chicken');
-  
+
 
   useEffect(() => {
-    debugger
     getRecipes();
   }, [query]);
 
@@ -42,10 +41,10 @@ const App = () => {
       <div className="recipes">
         {recipes && recipes.length > 0 && recipes.map((recipe, index) => (
           <Recipe
-            key={index} 
-            label={recipe.recipe.label} 
-            calories={recipe.recipe.calories} 
-            image={recipe.recipe.image} 
+            key={index}
+            label={recipe.recipe.label}
+            calories={recipe.recipe.calories}
+            image={recipe.recipe.image}
             ingredients = {recipe.recipe.ingredients}
           />
         ))}
